@@ -1,0 +1,19 @@
+.ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-has-trigger {
+  &:not(.ant-layout-sider-collapsed) {
+    min-width: 250px !important;
+
+    .ant-layout-sider-trigger {
+      min-width: 250px !important;
+    }
+  }
+
+  .ant-layout-sider-children {
+    overflow-y: auto;
+  }
+
+  .ant-layout-sider-trigger {
+    background-color: white;
+    color: black;
+    border-right: 1px solid #dde4ee;
+  }
+}

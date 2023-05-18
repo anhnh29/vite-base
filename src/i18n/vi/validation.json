@@ -1,0 +1,36 @@
+{
+  "required": "Hãy nhập thông tin cho trường {{label}}",
+  "default": "{{label}} không đáp ứng điều kiện quy định",
+  "enum": "{{label}} phải có giá trị nằm trong tập [${enum}]",
+  "whitespace": "{{label}} không được chứa khoảng trắng",
+  "date": {
+    "format": "{{label}} sai định dạng ngày tháng",
+    "parse": "Không thể chuyển {{label}} sang kiểu Ngày tháng",
+    "invalid": "{{label}} không phải giá trị Ngày tháng hợp lệ"
+  },
+  "types": "{{label}} không phải kiểu {{type}} hợp lệ",
+  "string": {
+    "len": "{{label}} phải dài đúng ${len} ký tự",
+    "min": "Độ dài tối thiểu trường {{label}} là {{min}} ký tự",
+    "max": "Độ dài tối đa trường {{label}} là {{max}} ký tự",
+    "range": "Độ dài trường {{label}} phải từ {{min}} đến {{max}} ký tự"
+  },
+  "number": {
+    "len": "{{label}} phải bằng ${len}",
+    "min": "{{label}} phải lớn hơn hoặc bằng {{min}}",
+    "max": "{{label}} phải nhỏ hơn hoặc bằng {{max}}",
+    "range": "{{label}} phải nằm trong khoảng {{min}}-{{max}}"
+  },
+  "array": {
+    "len": "Mảng {{label}} phải có ${len} phần tử ",
+    "min": "Mảng {{label}} phải chứa tối thiểu {{min}} phần tử ",
+    "max": "Mảng {{label}} phải chứa tối đa {{max}} phần tử ",
+    "range": "Mảng {{label}} phải chứa từ {{min}}-{{max}} phần tử"
+  },
+  "pattern": {
+    "mismatch": "{{label}} không thỏa mãn mẫu kiểm tra {{pattern}}"
+  },
+
+  "passwordMatchValidator": "Mật khẩu không giống nhau!",
+  "passwordSyntaxValidator": "Mật khẩu cần chứa số, chữ và kí tự đặc biệt"
+}

@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+}
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+.ant-table-container .ant-table-content {
+  table > thead {
+    tr {
+      th {
+        background-color: $table-header-bg-color;
+        padding: 10px 10px 10px 14px !important;
+        white-space: nowrap;
+
+        &:hover {
+          background-color: $table-header-bg-color !important;
+        }
+
+        &:first-child {
+          border-radius: 1rem 0 0 0;
+        }
+
+        &:last-child {
+          border-radius: 0 1rem 0 0;
+          padding-right: 20px !important;
+        }
+
+        &.ant-table-column-sort {
+          background-color: $table-header-bg-color;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      &.ant-table-row {
+        td,
+        th {
+          padding: 8px 10px 8px 14px !important;
+
+          &.ant-table-cell-row-hover {
+            background-color: $table-body-column-hover-color;
+            border-color: $table-body-column-hover-border-color;
+            cursor: pointer;
+          }
+
+          &.ant-table-column-sort {
+            background-color: $table-body-column-hover-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ant-picker {
+  width: 100%;
+}
+
+// form .ant-form-item .ant-form-item-label > label {
+// 	@apply text-sm font-medium text-black-60;
+
+// 	&.ant-form-item-required {
+// 		flex-flow: row-reverse;
+// 		gap: 4px;
+// 	}
+// }
+
+form div.ant-form-item-explain .ant-form-item-explain-error:not(:first-child) {
+  display: none;
+}

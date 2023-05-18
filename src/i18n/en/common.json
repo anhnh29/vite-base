@@ -1,0 +1,22 @@
+{
+  "dashboard": "Dashboard",
+  "search": "Search",
+
+  "filter": {
+    "title": "Filter",
+    "filters": "Filters",
+    "value": "Value",
+    "add_filter": "Add Filter",
+    "apply_filter": "Apply Filter",
+    "property": "Property",
+    "field": "Field",
+    "operator": "Operator",
+    "metric": "Metric",
+    "select": {
+      "property": "Select property",
+      "metric": "Select metric",
+      "field": "Select Field",
+      "operator": "Select Operator"
+    }
+  }
+}

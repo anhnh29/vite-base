@@ -1,0 +1,22 @@
+{
+  "dashboard": "Dashboard Vietnamese",
+  "search": "Tìm kiếm",
+
+  "filter": {
+    "title": "Lọc",
+    "filters": "Bộ lọc",
+    "value": "Giá trị",
+    "add_filter": "Thêm lọc",
+    "apply_filter": "Xác nhận lọc",
+    "property": "Thuộc tính",
+    "metric": "Phép tính",
+    "field": "Thuộc tính",
+    "operator": "Phép tính",
+    "select": {
+      "property": "Chọn thuộc tính",
+      "metric": "Chọn phép tính",
+      "field": "Chọn Thuộc tính",
+      "operator": "Chọn Phép tính"
+    }
+  }
+}

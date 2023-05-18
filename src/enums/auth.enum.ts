@@ -1,0 +1,27 @@
+export enum GENDERS {
+  MALE = 'MALE',
+  FEMALE = 'FEMALE',
+  OTHER = 'OTHER',
+}
+
+export enum ROLES {
+  USER = 'USER',
+  ADMIN = 'ADMIN',
+}
+
+export enum USER_STATUS {
+  ACTIVE = 'ACTIVE',
+  INACTIVE = 'INACTIVE',
+}
+
+export enum SOCIAL_LOGIN_TYPES {
+  FACEBOOK = 'FACEBOOK',
+  GOOGLE = 'GOOGLE',
+  APPLE = 'APPLE',
+  MICROSOFT = 'MICROSOFT',
+}
+
+export enum VERIFY_EMAIL_TYPES {
+  VERIFY_EMAIL = 'VERIFY_EMAIL',
+  RESET_PASSWORD = 'RESET_PASSWORD',
+}
