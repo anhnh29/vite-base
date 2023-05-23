@@ -24,11 +24,13 @@ export const Operators = [
     key: 'in',
     value: 'in',
     label: 'in',
+    disabled: true,
   },
   {
     key: 'nin',
     value: 'nin',
     label: 'not in',
+    disabled: true,
   },
   {
     key: 'lt',

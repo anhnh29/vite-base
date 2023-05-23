@@ -25,6 +25,7 @@ export interface IFiltersProps {
 export interface IOption {
   label: string
   value: string
+  disabled?: boolean
 }
 
 export interface IProperty extends Omit<DefaultOptionType, 'label'> {
@@ -37,12 +38,12 @@ const dateFormat = 'DD/MM/YYYY'
 
 const DynamicField = ({ type }: { type: string }): JSX.Element => {
   switch (type) {
-    case 'text':
+    case 'string':
       return <Input size={'large'} />
     case 'date':
       return <DatePicker size={'large'} format={dateFormat} />
     default:
-      return <></>
+      return <>Not supported</>
   }
 }
 const formatValue = (value: any): any => {
@@ -111,10 +112,14 @@ export default function Filters({
 
   const operatorOptions: IOption[] = useMemo(
     () =>
-      operators.map((o) => ({
-        value: o.value,
-        label: Operators.find((o) => o.key === o.value)?.label ?? o.value,
-      })),
+      operators.map((o) => {
+        const origin = Operators.find((op) => op.key === o.value)
+        return {
+          value: o.value,
+          label: origin?.label ?? o.value,
+          disabled: origin?.disabled,
+        }
+      }),
     [operators]
   )
 
