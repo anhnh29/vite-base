@@ -1,4 +1,5 @@
 import { DeleteOutlined, EditOutlined } from '@ant-design/icons'
+import { Counter } from '@dnh/dynamic-table'
 import { Button, Card, Popconfirm, Row, Space } from 'antd'
 import DynamicTable from 'components/Table/DynamicTable'
 import { API_SERVICES_URL } from 'config'
@@ -79,6 +80,7 @@ const SettingTemplate: FC = () => {
 
   return (
     <>
+      <Counter />
       <Row justify={'end'} className="mb-4">
         <Button
           type="primary"

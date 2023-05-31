@@ -15,6 +15,7 @@
   "dependencies": {
     "-": "^0.0.1",
     "@ant-design/icons": "^5.1.0",
+    "@dnh/dynamic-table": "^1.0.4",
     "@reduxjs/toolkit": "^1.9.5",
     "antd": "^5.5.0",
     "axios": "^1.4.0",
