@@ -1,7 +1,7 @@
 import { CheckCircleFilled, CloseCircleFilled } from '@ant-design/icons'
 import { TablePaginationConfig } from 'antd'
 import { ColumnType, ColumnsType, SorterResult } from 'antd/es/table/interface'
-import { IProperty } from 'components/Filter'
+import { IProperty } from 'components/Filter/DynamicFilter'
 import dayjs from 'dayjs'
 import { capitalize, pick } from 'lodash-es'
 import { ReactNode, useCallback, useEffect, useMemo, useState } from 'react'

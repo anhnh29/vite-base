@@ -1,5 +1,9 @@
 import { DeleteOutlined, EditOutlined } from '@ant-design/icons'
-import { Counter } from '@dnh/dynamic-table'
+import {
+  Counter,
+  DynamicTable as DynamicTableDNH,
+  DynamicTableProvider,
+} from '@dnh/dynamic-table'
 import { Button, Card, Popconfirm, Row, Space } from 'antd'
 import DynamicTable from 'components/Table/DynamicTable'
 import { API_SERVICES_URL } from 'config'
@@ -8,6 +12,8 @@ import {
   ITableRef,
   TableColumn,
 } from 'interfaces/dynamicTable.interface'
+import axiosInstance from 'services/api.service'
+
 import { ITemplate } from 'interfaces/template.interface'
 import { FC, ReactNode, useMemo, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -107,6 +113,23 @@ const SettingTemplate: FC = () => {
           relations="language"
           urlSync
         />
+        <DynamicTableProvider axiosInstance={axiosInstance}>
+          <DynamicTableDNH<ITemplate>
+            ref={tableRef}
+            headerUrl={'templates/dynamic/fields'}
+            dataTableUrl={'templates/paging/v2'}
+            baseURL={API_SERVICES_URL || ''}
+            rowKey={(record: ITemplate) => record.uid}
+            customColumns={[languageColumn, actionColumns]}
+            searchableConfig={{
+              layout: 'inline',
+            }}
+            defaultFilters={defaultFilters}
+            displayColumns={['templateCode', 'subject', 'language', 'action']}
+            relations="language"
+            urlSync
+          />
+        </DynamicTableProvider>
       </Card>
     </>
   )

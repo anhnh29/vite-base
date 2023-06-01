@@ -4,7 +4,7 @@ import {
 } from 'interfaces/dynamicTable.interface'
 import axiosInstance, { errorHandler } from './api.service'
 
-const getTableHeader = async (url: string): Promise<TableHeaderResponse> => {
+const getTableHeader = async (url: string): Promise<TableHeaderResponse > => {
   return await axiosInstance.get(url).catch(errorHandler)
 }
 
