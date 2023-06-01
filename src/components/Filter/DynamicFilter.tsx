@@ -36,12 +36,12 @@ export interface IProperty extends Omit<DefaultOptionType, 'label'> {
 
 const dateFormat = 'DD/MM/YYYY'
 
-const DynamicField = ({ type }: { type: string }): JSX.Element => {
+const DynamicField = ({ type, ...rest }: { type: string }): JSX.Element => {
   switch (type) {
     case 'string':
-      return <Input size={'large'} />
+      return <Input size={'large'} {...rest} />
     case 'date':
-      return <DatePicker size={'large'} format={dateFormat} />
+      return <DatePicker size={'large'} format={dateFormat} {...rest} />
     default:
       return <>Not supported</>
   }
@@ -86,9 +86,11 @@ export default function Filters({
         logic: 'AND',
         value: formatValue(filter.value),
         labelField: properties.find((el) => el.value === filter.field)?.label,
-        labelOperator: operators.find((el) => el.value === filter.operator)
+        labelOperator: Operators.find((el) => el.key === filter.operator)
           ?.label,
       }
+      console.log(operators);
+      console.log(filter);
       if (filter.id) {
         onFilter(filters.map((f) => (f.id === filter.id ? payload : f)))
       } else {
@@ -113,6 +115,10 @@ export default function Filters({
   const operatorOptions: IOption[] = useMemo(
     () =>
       operators.map((o) => {
+        // return {
+        //   value: o.value,
+        //   label: o.key
+        // }
         const origin = Operators.find((op) => op.key === o.value)
         return {
           value: o.value,
